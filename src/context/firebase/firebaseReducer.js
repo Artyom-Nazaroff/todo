@@ -12,7 +12,7 @@ const firebaseReducer = (state = initialState, action) => {
     switch (action.type) {
         case SHOW_LOADER: return {...state, loading: true};
         case FETCH_NOTES: return {...state, notes: action.notes, loading: false};
-        case ADD_NOTE: return {...state, notes: [action.note, ...state.notes]};
+        case ADD_NOTE: return {...state, notes: [...state.notes, action.note]};
         case REMOVE_NOTE: return {...state, notes: state.notes.filter(note => note.id !== action.id)};
         default: return state;
     }

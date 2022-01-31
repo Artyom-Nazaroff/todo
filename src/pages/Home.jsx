@@ -26,7 +26,7 @@ const Home = () => {
                     : <Notes notes={notes} removeNote={removeNote}/>
                 )
                 :
-                <div className={'text-center'}><strong>Здесь нет ещё ни одной заметки</strong></div>}
+                <div className={'text-center'}><strong>Здесь ещё нет ни одной заметки</strong></div>}
         </div>
     );
 };
